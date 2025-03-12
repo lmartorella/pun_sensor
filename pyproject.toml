@@ -1,3 +1,13 @@
+[project]
+name = 'pun_sensor'
+version = "1.0.0"
+
+[tool.setuptools]
+packages = ["pun_sensor"]
+
+[tool.setuptools.package-dir]
+pun_sensor = "lib"
+
 [tool.pylint."MESSAGES CONTROL"]
 # Reasons disabled:
 # format - handled by ruff

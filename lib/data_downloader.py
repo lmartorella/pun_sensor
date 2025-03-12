@@ -5,8 +5,8 @@ from logging import Logger
 from statistics import mean
 import zipfile
 from zoneinfo import ZoneInfo
-from lib.interfaces import Fascia, PunData, PunValues
-from lib.utils import extract_xml
+from .interfaces import Fascia, PunData, PunValues
+from .utils import extract_xml
 
 class DataDownloader:
     session: ClientSession
