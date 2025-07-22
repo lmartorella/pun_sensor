@@ -1,6 +1,12 @@
 [project]
 name = 'pun_sensor'
 version = "1.0.0"
+dependencies = [
+    "aiohttp", 
+    "defusedxml",
+    "holidays",
+    "tzdata"
+]
 
 [tool.setuptools]
 packages = ["pun_sensor"]
