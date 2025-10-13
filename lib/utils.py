@@ -203,6 +203,10 @@ def extract_xml(archive: ZipFile, pun_data: PunData, today: date) -> PunData:
         # Parsing dell'XML (1 file = 1 giorno)
         xml_root = xml_tree.getroot()
 
+        # Salta per ora i file con i prezzi a 15 minuti
+        if xml_root.find("Prezzi15"):
+            continue
+
         # Estrae la data dal primo elemento (sarà identica per gli altri)
         dat_string = xml_root.find("Prezzi").find("Data").text  # YYYYMMDD
 
